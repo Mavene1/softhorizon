@@ -1,16 +1,15 @@
 import Link from "next/link";
 import { Logo } from "@/components/common/logo";
+import { services } from "@/content/services";
 import { siteConfig } from "@/content/site";
 
 const COLUMNS = [
   {
     title: "Services",
-    links: [
-      { label: "Custom Software", href: "/services#custom-software" },
-      { label: "Web & Mobile", href: "/services#web-mobile" },
-      { label: "Cloud & DevOps", href: "/services#cloud-devops" },
-      { label: "AI & Data", href: "/services#ai-data" },
-    ],
+    links: [...services]
+      .sort((a, b) => a.order - b.order)
+      .slice(0, 4)
+      .map((service) => ({ label: service.title, href: `/services/${service.slug}` })),
   },
   {
     title: "Company",
