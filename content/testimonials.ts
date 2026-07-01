@@ -8,7 +8,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Softhorizon completely transformed the way we operate. Their system streamlined our workflow, reduced errors, and gave us back countless hours every week.",
+      "SoftHorizon completely transformed the way we operate. Their system streamlined our workflow, reduced errors, and gave us back countless hours every week.",
     name: "Operations Director",
     role: "Operations Director",
     company: "Public-sector client",

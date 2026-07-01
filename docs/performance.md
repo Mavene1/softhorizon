@@ -50,7 +50,7 @@ Images are a primary performance factor — hero images, team photos, project ga
 // ✅ Hero image — priority, explicit dimensions
 <Image
   src="/images/hero-bg.jpg"
-  alt="Softhorizon team building digital products"
+  alt="SoftHorizon team building digital products"
   width={1440}
   height={800}
   priority          // above fold — loads before page is interactive

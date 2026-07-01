@@ -31,7 +31,7 @@ Check `package.json` for exact installed versions before assuming API shape. Rea
 <!-- END:nextjs-agent-rules -->
 
 <!-- BEGIN:project-agent-rules -->
-# Softhorizon — Company Website
+# SoftHorizon — Company Website
 
 ## Lean Doc Rule
 
@@ -41,7 +41,7 @@ After any structural change, new section, or content update — update the relev
 
 ## What this is
 
-**Softhorizon** company website (`softhorizon.com`) — a world-class digital company presence inspired by Stripe, Linear, Vercel, and Notion. It goes far beyond a brochure. Its scope includes:
+**SoftHorizon** company website (`softhorizon.com`) — a world-class digital company presence inspired by Stripe, Linear, Vercel, and Notion. It goes far beyond a brochure. Its scope includes:
 
 - **Company identity** — mission, vision, values, founding story, timeline
 - **Services & solutions** — detailed capability pages, persona/industry landing pages, pricing
@@ -269,7 +269,7 @@ import { generateMetadata as buildMeta } from "@/lib/metadata";
 
 export const metadata = buildMeta({
   title: "About Us",
-  description: "Learn about Softhorizon — our story, mission, and the team behind our work.",
+  description: "Learn about SoftHorizon — our story, mission, and the team behind our work.",
   path: "/about",
 });
 

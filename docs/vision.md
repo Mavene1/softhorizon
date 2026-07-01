@@ -1,6 +1,6 @@
 # Website Vision & Feature Roadmap
 
-This document captures the full scope of what Softhorizon's website aims to be — not a brochure, but a world-class company presence that drives business, builds trust, and showcases talent. Use it as the north star during development. Check off features as they are built.
+This document captures the full scope of what SoftHorizon's website aims to be — not a brochure, but a world-class company presence that drives business, builds trust, and showcases talent. Use it as the north star during development. Check off features as they are built.
 
 ## Philosophy
 
@@ -66,7 +66,7 @@ softhorizon.com
 ├── /impact                      → transparent metrics page (optional standalone)
 └── (planned later — Phase 3)
     ├── /community               → link out to Discord / Circle forum
-    └── /api-docs                → if Softhorizon ships a developer-facing product
+    └── /api-docs                → if SoftHorizon ships a developer-facing product
 ```
 
 ---
@@ -120,7 +120,7 @@ Track progress here. Move items to "Done" by adding ✅.
 
 - [ ] **Careers page** (`/careers`) — Open roles, filterable by department / remote / location
 - [ ] **Job listing** (`/careers/[job-slug]`) — Role detail, responsibilities, application form (Server Action → Resend)
-- [ ] **Life at Softhorizon section** — Real photos, team events, culture values
+- [ ] **Life at SoftHorizon section** — Real photos, team events, culture values
 - [ ] **Benefits & perks page** — Detailed, visual, honest
 - [ ] **Interview process section** — Demystify: stages, timelines, what to expect
 - [ ] **DEI commitments** — With data and actual goals

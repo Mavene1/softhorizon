@@ -127,7 +127,7 @@ export const megaMenus: MegaMenu[] = [
       label: "Get to know us",
       description: "Our story, the team behind it, and open roles.",
       href: "/about",
-      cta: "About Softhorizon",
+      cta: "About SoftHorizon",
     },
   },
 ];

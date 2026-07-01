@@ -17,7 +17,7 @@ export function Logo({ className, variant = "default" }: LogoProps) {
       </span>
       <span className="text-lg font-bold tracking-tight">
         <span className="text-primary">Soft</span>
-        <span className={isDark ? "text-white" : "text-brand-blue dark:text-foreground"}>horizon</span>
+        <span className={isDark ? "text-white" : "text-brand-blue dark:text-foreground"}>Horizon</span>
       </span>
     </Link>
   );

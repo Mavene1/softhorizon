@@ -47,7 +47,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
   title: "About Us",
-  description: "Learn about Softhorizon — our story, mission, and the team behind our work.",
+  description: "Learn about SoftHorizon — our story, mission, and the team behind our work.",
   path: "/about",
 });
 

@@ -91,7 +91,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
   title: "About Us",
-  description: "Learn about Softhorizon — our mission, vision, and the team behind our work.",
+  description: "Learn about SoftHorizon — our mission, vision, and the team behind our work.",
   path: "/about",
 });
 
@@ -227,14 +227,14 @@ For individual project pages, add `CreativeWork` schema. For team member pages, 
 
 | Page | Title |
 |---|---|
-| Homepage | `Softhorizon — Building digital experiences that matter` |
-| About | `About Us \| Softhorizon` |
-| Services | `Services \| Softhorizon` |
-| Individual service | `Web Development \| Softhorizon` |
-| Projects | `Our Work \| Softhorizon` |
-| Individual project | `IoT Management Platform \| Softhorizon` |
-| Team | `Our Team \| Softhorizon` |
-| Contact | `Contact Us \| Softhorizon` |
+| Homepage | `SoftHorizon — Building digital experiences that matter` |
+| About | `About Us \| SoftHorizon` |
+| Services | `Services \| SoftHorizon` |
+| Individual service | `Web Development \| SoftHorizon` |
+| Projects | `Our Work \| SoftHorizon` |
+| Individual project | `IoT Management Platform \| SoftHorizon` |
+| Team | `Our Team \| SoftHorizon` |
+| Contact | `Contact Us \| SoftHorizon` |
 
 ## `next.config.ts` SEO Settings
 

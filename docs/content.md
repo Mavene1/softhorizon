@@ -32,14 +32,14 @@ Never hardcode company copy in component files. All text, names, descriptions, l
 ```ts
 // content/site.ts
 export const siteConfig = {
-  name: "Softhorizon",
-  legalName: "Softhorizon Ltd",
+  name: "SoftHorizon",
+  legalName: "SoftHorizon Ltd",
   tagline: "Building digital experiences that matter",
   shortTagline: "Digital Excellence",
 
   heroHeadline: "We Build Software That Drives Growth",
   heroSubtitle:
-    "Softhorizon partners with ambitious companies to design and build digital products that solve real problems and create lasting impact.",
+    "SoftHorizon partners with ambitious companies to design and build digital products that solve real problems and create lasting impact.",
 
   mission:
     "To empower businesses with purpose-built software that is fast, reliable, and beautifully crafted.",
@@ -50,7 +50,7 @@ export const siteConfig = {
   location: "Nairobi, Kenya",
   email: "hello@softhorizon.com",
   phone: "+254 700 000 000",
-  address: "Softhorizon Ltd, Nairobi, Kenya",
+  address: "SoftHorizon Ltd, Nairobi, Kenya",
 
   social: {
     twitter: "https://twitter.com/softhorizon",
@@ -212,7 +212,7 @@ export const teamMembers: TeamMember[] = [
     name: "John Doe",
     role: "Co-founder & CEO",
     department: "Leadership",
-    bio: "John leads Softhorizon's strategy and vision, bringing 10+ years of experience in software product development.",
+    bio: "John leads SoftHorizon's strategy and vision, bringing 10+ years of experience in software product development.",
     photo: "/images/team/john-doe.jpg",
     social: { linkedin: "https://linkedin.com/in/johndoe" },
     featured: true,
@@ -239,7 +239,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: "t1",
-    quote: "Softhorizon delivered a platform that exceeded our expectations. The team is exceptional.",
+    quote: "SoftHorizon delivered a platform that exceeded our expectations. The team is exceptional.",
     author: "Jane Smith",
     role: "Head of Digital",
     company: "Acme Corp",

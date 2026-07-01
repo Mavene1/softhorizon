@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "Softhorizon",
-  legalName: "Softhorizon Ltd",
+  name: "SoftHorizon",
+  legalName: "SoftHorizon Ltd",
   tagline: "We build the technology your business runs on.",
   shortTagline: "Software · Web & Mobile · Cloud · AI",
 
   heroHeadline: "We build the technology your business runs on.",
   heroSubtitle:
-    "Softhorizon is a software engineering partner. From web and mobile apps to cloud, APIs, and AI, we design, build, and scale the custom solutions that move your business forward.",
+    "SoftHorizon is a software engineering partner. From web and mobile apps to cloud, APIs, and AI, we design, build, and scale the custom solutions that move your business forward.",
 
   mission:
     "To help organisations everywhere build dependable, human-centred technology — from web and mobile to cloud and AI — that drives real, sustainable growth.",
@@ -14,7 +14,7 @@ export const siteConfig = {
     "A world where every business, regardless of size, has access to world-class software craftsmanship.",
 
   story: [
-    "Softhorizon started in 2020 as a two-person studio in Nairobi, building software for local businesses that had been overlooked by bigger agencies.",
+    "SoftHorizon started in 2020 as a two-person studio in Nairobi, building software for local businesses that had been overlooked by bigger agencies.",
     "What began as a handful of internal tools and small business sites grew into full platforms for government agencies, fintech startups, and logistics operators — the kind of software that has to work, every day, for people who don't have the patience for bugs.",
     "Today we're a team of engineers, designers, and product thinkers spread across Kenya, still operating on the same principle we started with: build it like you'll be the one maintaining it in five years.",
   ],
@@ -22,7 +22,7 @@ export const siteConfig = {
   founded: 2020,
   location: "Nairobi, Kenya",
   email: "hello@softhorizon.com",
-  address: "Softhorizon Ltd, Nairobi, Kenya",
+  address: "SoftHorizon Ltd, Nairobi, Kenya",
 
   social: {
     twitter: "https://twitter.com/softhorizon",

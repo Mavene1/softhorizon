@@ -1,4 +1,4 @@
-# Softhorizon — Company Website
+# SoftHorizon — Company Website
 
 World-class digital company presence for [softhorizon.com](https://softhorizon.com). Inspired by Stripe, Linear, Vercel, and Notion — built to drive business, build trust, and showcase talent.
 
