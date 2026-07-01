@@ -21,7 +21,7 @@ export function CtaStrip({ headline, subtext, primaryCta, secondaryCta }: CtaStr
         <h2 className="text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">{headline}</h2>
         {subtext && <p className="mt-4 text-base leading-relaxed text-white/85">{subtext}</p>}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg" variant="secondary" className="bg-white text-foreground hover:bg-white/90">
+          <Button asChild size="lg" variant="secondary" className="bg-white text-neutral-900 hover:bg-white/90">
             <Link href={primaryCta.href}>{primaryCta.label}</Link>
           </Button>
           {secondaryCta && (
