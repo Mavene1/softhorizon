@@ -4,16 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/common/logo";
 import { MobileMenu } from "@/components/layout/mobile-menu";
+import { NAV_LINKS } from "@/components/layout/nav-links";
 import { Button } from "@/components/ui/button";
 import { DynamicIcon } from "@/lib/icons";
 import { useDisclosure } from "@/hooks/ui/use-disclosure";
-
-const NAV_LINKS = [
-  { label: "Services", href: "/services" },
-  { label: "Work", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
-];
 
 export function Navbar() {
   const pathname = usePathname();

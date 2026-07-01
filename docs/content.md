@@ -15,7 +15,7 @@ Never hardcode company copy in component files. All text, names, descriptions, l
 | File | What it contains |
 |---|---|
 | `content/site.ts` | Company name, tagline, mission, vision, contact info, social links, hero copy |
-| `content/services.ts` | Services/capabilities offered — title, description, icon, features, slug |
+| `content/services.ts` | Services/capabilities offered — title, description, icon, features, use cases, tech stack, slug; also exports the shared `serviceProcess` steps |
 | `content/projects.ts` | Portfolio/case studies — title, client, summary, outcomes, tags, images, slug |
 | `content/team.ts` | Team members — name, role, bio, photo, social links |
 | `content/testimonials.ts` | Client testimonials — quote, author, company, photo |
@@ -67,6 +67,11 @@ export const siteConfig = {
 
 ```ts
 // content/services.ts
+export interface ServiceUseCase {
+  title: string;
+  description: string;
+}
+
 export interface Service {
   slug: string;
   title: string;
@@ -75,10 +80,24 @@ export interface Service {
   longDescription: string;
   icon: string;             // icon name for DynamicIcon/getIcon
   features: string[];
+  useCases: ServiceUseCase[];  // 3+ problem/fit scenarios shown on the detail page
   technologies?: string[];
   featured: boolean;
   order: number;
 }
+
+export interface ServiceProcessStep {
+  title: string;
+  description: string;
+}
+
+// Shared delivery process — rendered on every /services/[slug] page, not duplicated per service
+export const serviceProcess: ServiceProcessStep[] = [
+  { title: "Discover", description: "..." },
+  { title: "Design", description: "..." },
+  { title: "Build", description: "..." },
+  { title: "Launch & support", description: "..." },
+];
 
 export const services: Service[] = [
   {
@@ -93,6 +112,10 @@ export const services: Service[] = [
       "REST & GraphQL API integration",
       "Performance optimisation",
       "Responsive design",
+    ],
+    useCases: [
+      { title: "Launch a customer-facing app", description: "..." },
+      // ...
     ],
     technologies: ["Next.js", "React", "TypeScript", "Node.js"],
     featured: true,

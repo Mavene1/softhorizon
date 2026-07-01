@@ -4,13 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-
-const NAV_LINKS = [
-  { label: "Services", href: "/services" },
-  { label: "Work", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
-];
+import { NAV_LINKS } from "@/components/layout/nav-links";
 
 interface MobileMenuProps {
   isOpen: boolean;

@@ -9,7 +9,8 @@ For the full feature roadmap and IA, see `docs/vision.md`. Below is the complete
 | `/` | Homepage — hero, value proposition, stats, services teaser, projects teaser, testimonials, CTA |
 | `/about` | Company story, mission, vision, values, timeline/milestones |
 | `/services` | Services overview grid |
-| `/services/[slug]` | Individual service detail — features, process, tech stack, CTA |
+| `/services/[slug]` | Individual service detail — features, use cases, tech stack, process, CTA |
+| `/solutions` | Solutions overview grid (all personas & industries) |
 | `/solutions/[slug]` | Persona/industry landing pages (e.g. "for-startups", "for-fintech") |
 | `/projects` | Portfolio/case studies grid (filterable by category) |
 | `/projects/[slug]` | Individual project case study — problem, solution, results, gallery |
@@ -118,6 +119,7 @@ components/sections/
     services-grid.tsx
     service-detail-sections.tsx
   solutions/
+    solutions-grid.tsx
     solution-hero.tsx
     use-cases-section.tsx
   projects/

@@ -140,6 +140,11 @@ import {
   Rss,
   Router,
   Navigation,
+  Gem,
+  Handshake,
+  Lightbulb,
+  Target,
+  Compass,
   type LucideIcon,
   type LucideProps,
 } from "lucide-react";
@@ -287,6 +292,11 @@ const iconMap: Record<string, LucideIcon> = {
   Rss,
   Router,
   Navigation,
+  Gem,
+  Handshake,
+  Lightbulb,
+  Target,
+  Compass,
 };
 
 export type { LucideIcon };

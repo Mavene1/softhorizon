@@ -228,6 +228,7 @@ components/sections/
     services-grid.tsx
     service-detail-sections.tsx
   solutions/
+    solutions-grid.tsx
     solution-hero.tsx
     use-cases-section.tsx
   projects/

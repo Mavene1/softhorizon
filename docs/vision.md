@@ -37,6 +37,7 @@ softhorizon.com
 │   ├── /services                → services overview grid
 │   └── /services/[slug]         → individual service detail
 ├── /solutions
+│   ├── /solutions                → solutions overview grid (all personas & industries)
 │   └── /solutions/[slug]        → one dynamic route covers all personas & industries
 │                                  (e.g. "for-fintech", "for-startups", "for-enterprise")
 ├── /projects                    → portfolio / case studies
@@ -76,10 +77,10 @@ Track progress here. Move items to "Done" by adding ✅.
 
 ### Core Pages
 
-- [ ] **Homepage** — Hero, value proposition, stats/social proof, services teaser, projects teaser, testimonials, CTA strip
-- [ ] **About** — Founding story, mission & vision, values (visual treatment), timeline/milestones
-- [ ] **Services** — Services grid overview
-- [ ] **Service detail** (`/services/[slug]`) — Features, use cases, tech stack, process, CTA
+- [x] **Homepage** ✅ — Hero, value proposition, stats/social proof, services teaser, projects teaser, testimonials, CTA strip
+- [x] **About** ✅ — Founding story, mission & vision, values (visual treatment), timeline/milestones
+- [x] **Services** ✅ — Services grid overview
+- [x] **Service detail** ✅ (`/services/[slug]`) — Features, use cases, tech stack, process, CTA
 - [ ] **Projects / Portfolio** — Filterable grid by category
 - [ ] **Project detail** (`/projects/[slug]`) — Problem → Solution → Results, metrics, gallery, testimonial
 - [ ] **Team** — Grid with photos, roles, bios
@@ -91,7 +92,7 @@ Track progress here. Move items to "Done" by adding ✅.
 
 ### Marketing & Growth
 
-- [ ] **Solutions pages** (`/solutions/[industry]`) — Persona-specific landing pages (e.g. "For Fintech", "For Startups")
+- [x] **Solutions pages** ✅ (`/solutions/[slug]`) — Persona-specific landing pages (e.g. "For Fintech", "For Startups")
 - [ ] **Newsletter signup** — Inline section + dedicated block; Server Action → Mailchimp/Buttondown
 - [ ] **Lead capture forms** — Progressive profiling: name + email first, details later
 - [ ] **Live chat widget** — Crisp or Intercom embed (script in layout)
@@ -159,18 +160,18 @@ All content lives in `content/` as TypeScript — see `docs/content.md` for sche
 
 | File | Status |
 |---|---|
-| `content/site.ts` | needs creating |
-| `content/services.ts` | needs creating |
-| `content/projects.ts` | needs creating |
+| `content/site.ts` | done |
+| `content/services.ts` | done |
+| `content/projects.ts` | done |
 | `content/team.ts` | needs creating |
-| `content/testimonials.ts` | needs creating |
-| `content/values.ts` | needs creating |
+| `content/testimonials.ts` | done |
+| `content/values.ts` | done |
 | `content/faqs.ts` | needs creating |
 | `content/blog/` (MDX files) | needs creating |
 | `content/careers.ts` | needs creating |
 | `content/pricing.ts` | needs creating |
 | `content/changelog/` (MDX files) | needs creating |
-| `content/solutions.ts` | needs creating |
+| `content/solutions.ts` | done |
 
 ---
 

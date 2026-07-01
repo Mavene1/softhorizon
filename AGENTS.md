@@ -121,6 +121,7 @@ app/
     page.tsx              → services overview
     [slug]/page.tsx       → individual service detail
   solutions/
+    page.tsx              → solutions overview grid
     [slug]/page.tsx       → persona/industry landing pages
   projects/
     page.tsx              → portfolio / case studies grid
@@ -183,7 +184,7 @@ components/
                             testimonials-section, cta-section
     about/                → story-section, mission-vision-section, values-section, timeline-section
     services/             → services-grid, service-detail-sections
-    solutions/            → solution-hero, use-cases-section
+    solutions/            → solutions-grid, solution-hero, use-cases-section
     projects/             → projects-grid, project-card, project-detail-sections
     team/                 → team-grid, team-member-card, member-detail-sections
     pricing/              → pricing-table, feature-matrix, pricing-faq

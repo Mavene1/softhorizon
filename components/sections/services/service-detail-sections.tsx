@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Service } from "@/content/services";
-import { services } from "@/content/services";
+import { services, serviceProcess } from "@/content/services";
 import { DynamicIcon } from "@/lib/icons";
 import { Badge } from "@/components/ui/badge";
 import { ServiceCard } from "@/components/common/service-card";
@@ -51,6 +51,33 @@ export function ServiceDetailSections({ service }: { service: Service }) {
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+        <h2 className="text-sm font-semibold tracking-wide text-foreground uppercase">Where this fits</h2>
+        <div className="mt-6 grid gap-5 sm:grid-cols-3">
+          {service.useCases.map((useCase) => (
+            <div key={useCase.title} className="rounded-2xl border border-border bg-card p-6">
+              <h3 className="text-base font-semibold tracking-tight">{useCase.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{useCase.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+        <h2 className="text-sm font-semibold tracking-wide text-foreground uppercase">How we work</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {serviceProcess.map((step, index) => (
+            <div key={step.title}>
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
+                {index + 1}
+              </div>
+              <h3 className="mt-4 text-base font-semibold tracking-tight">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 

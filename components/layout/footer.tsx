@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/common/logo";
 import { services } from "@/content/services";
+import { solutions } from "@/content/solutions";
 import { siteConfig } from "@/content/site";
 
 const COLUMNS = [
@@ -10,6 +11,10 @@ const COLUMNS = [
       .sort((a, b) => a.order - b.order)
       .slice(0, 4)
       .map((service) => ({ label: service.title, href: `/services/${service.slug}` })),
+  },
+  {
+    title: "Solutions",
+    links: solutions.map((solution) => ({ label: solution.persona, href: `/solutions/${solution.slug}` })),
   },
   {
     title: "Company",
@@ -37,7 +42,7 @@ const SOCIAL_LINKS = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-brand-ink text-neutral-300">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-10 px-6 py-14 sm:grid-cols-2 md:grid-cols-5">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-10 px-6 py-14 sm:grid-cols-2 md:grid-cols-6">
         <div className="col-span-2">
           <Logo variant="dark" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
