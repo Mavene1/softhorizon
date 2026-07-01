@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Providers } from "@/providers";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -42,15 +43,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
+    <html lang="en" className={`${montserrat.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col font-sans">
-        <Providers>
-          <TooltipProvider>
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </TooltipProvider>
-        </Providers>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Providers>
+            <TooltipProvider>
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </TooltipProvider>
+          </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 }
 ```
 
-Reading/setting theme in components:
+The actual toggle used in the navbar is `components/common/theme-toggle.tsx` — it adds a `mounted` guard before reading `resolvedTheme` to avoid an SSR/CSR hydration mismatch. Reading/setting theme in components:
 
 ```tsx
 "use client";

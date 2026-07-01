@@ -63,12 +63,16 @@ Instantiated once in the root layout. Never render them inside page sections.
 
 | Component | File | Purpose |
 |---|---|---|
-| `Navbar` | `navbar.tsx` | Fixed top navigation with links and dark-mode toggle |
+| `Navbar` | `navbar.tsx` | Sticky top navigation — mega-menu dropdowns (Services/Solutions), simple links, `ThemeToggle`, scroll-aware background |
 | `Footer` | `footer.tsx` | Site footer — links, social icons, copyright |
-| `MobileMenu` | `mobile-menu.tsx` | Mobile drawer navigation (Zustand: `mobileMenuOpen`) |
+| `MobileMenu` | `mobile-menu.tsx` | Mobile `Sheet` drawer — accordion (`Collapsible`) mirrors the desktop mega-menus |
 | `SearchDialog` | `search-dialog.tsx` | Cmd+K global search modal (Fuse.js over `content/`) |
 
-`MobileMenu` and `SearchDialog` are Client Components. `Navbar` and `Footer` can be Server Components if they only render static links from `content/site.ts`.
+`Navbar` and `MobileMenu` are Client Components (scroll listener, hover-intent state, `Collapsible`/`Sheet` open state via `useNavbar` in `use-navbar.ts`). `SearchDialog` is a Client Component. `Footer` can be a Server Component if it only renders static links from `content/site.ts`.
+
+Navbar mega-menu data (`megaMenus`, `simpleLinks`, `navCta`) lives in `nav-config.ts`, derived from `content/services.ts` and `content/solutions.ts` — never hardcode nav copy in `navbar.tsx`/`mobile-menu.tsx` directly.
+
+`ThemeToggle` (`components/common/theme-toggle.tsx`) wraps `next-themes`' `useTheme` — see `docs/state-management.md` for the theme setup. It guards against SSR/CSR hydration mismatch with a `mounted` check before reading `resolvedTheme`.
 
 ---
 
