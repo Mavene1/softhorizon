@@ -63,14 +63,16 @@ Instantiated once in the root layout. Never render them inside page sections.
 
 | Component | File | Purpose |
 |---|---|---|
-| `Navbar` | `navbar.tsx` | Sticky top navigation — mega-menu dropdowns (Services/Solutions), simple links, `ThemeToggle`, scroll-aware background |
+| `Navbar` | `navbar.tsx` | Sticky top navigation — mega-menu dropdowns (Services/Solutions/Resources/Company), simple links (Work/Pricing), `ThemeToggle`, scroll-aware background |
 | `Footer` | `footer.tsx` | Site footer — links, social icons, copyright |
 | `MobileMenu` | `mobile-menu.tsx` | Mobile `Sheet` drawer — accordion (`Collapsible`) mirrors the desktop mega-menus |
 | `SearchDialog` | `search-dialog.tsx` | Cmd+K global search modal (Fuse.js over `content/`) |
 
 `Navbar` and `MobileMenu` are Client Components (scroll listener, hover-intent state, `Collapsible`/`Sheet` open state via `useNavbar` in `use-navbar.ts`). `SearchDialog` is a Client Component. `Footer` can be a Server Component if it only renders static links from `content/site.ts`.
 
-Navbar mega-menu data (`megaMenus`, `simpleLinks`, `navCta`) lives in `nav-config.ts`, derived from `content/services.ts` and `content/solutions.ts` — never hardcode nav copy in `navbar.tsx`/`mobile-menu.tsx` directly.
+Navbar mega-menu data (`megaMenus`, `simpleLinks`, `navCta`) lives in `nav-config.ts` — never hardcode nav copy in `navbar.tsx`/`mobile-menu.tsx` directly. `Services` and `Solutions` are derived from `content/services.ts`/`content/solutions.ts`; `Resources` and `Company` are hand-authored (their pages — blog, careers, team, press, partners, etc. — don't have `content/` collections yet, per `docs/vision.md`'s roadmap).
+
+IA rationale: primary nav is capped at 4 mega-menus + 2 simple links + the Contact CTA so it stays scannable. Lower-frequency destinations (Team, Careers, Press, Partners live under Company; Changelog and Glossary live under Resources) get a menu slot rather than their own top-level item; legal pages (`/legal/*`) stay footer-only and never appear in `nav-config.ts`.
 
 `ThemeToggle` (`components/common/theme-toggle.tsx`) wraps `next-themes`' `useTheme` — see `docs/state-management.md` for the theme setup. It guards against SSR/CSR hydration mismatch with a `mounted` check before reading `resolvedTheme`.
 
