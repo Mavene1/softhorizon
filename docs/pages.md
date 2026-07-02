@@ -160,9 +160,15 @@ components/sections/
     glossary-index.tsx
     term-detail.tsx
   resources/
-    case-studies-grid.tsx
+    case-studies-grid.tsx        → [ ] not yet built
     whitepapers-grid.tsx
-    webinars-grid.tsx
+    whitepaper-card.tsx          → "use client" — Dialog + email-gate form per card
+    whitepapers/
+      schemas.ts
+      actions.ts                 → requestWhitepaper() — Resend emails a download link, per docs/integrations.md
+      hooks/
+        use-whitepaper-request-form.ts
+    webinars-grid.tsx            → [ ] not yet built
 ```
 
 ### Page Aggregator Components
