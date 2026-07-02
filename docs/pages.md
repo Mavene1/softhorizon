@@ -158,7 +158,8 @@ components/sections/
   legal/
     legal-document-sections.tsx    → shared renderer for privacy/terms/security, driven by content/legal.ts
   changelog/
-    changelog-list.tsx
+    changelog-list.tsx        → timeline UI (reuses the about/timeline-section.tsx dot-and-line pattern), reads lib/changelog.ts
+    changelog-mdx-components.tsx → minimal MDXRemote overrides (p, a only — entries are short)
   glossary/
     glossary-index.tsx
     term-detail.tsx

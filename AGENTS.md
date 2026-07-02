@@ -205,6 +205,7 @@ lib/
   query-client.ts         → makeQueryClient (gcTime: 5 min)
   search.ts               → Fuse.js index builder for global search  [planned]
   blog.ts                 → fs + gray-matter reader for content/blog/*.mdx (the one content/ exception — not a static import)
+  changelog.ts             → same pattern as blog.ts, for content/changelog/*.mdx (no per-entry route — rendered inline on /changelog)
 
 store/
   ui-store.ts             → Zustand (minimal): mobileMenuOpen, searchOpen  [planned]

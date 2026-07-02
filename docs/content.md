@@ -475,6 +475,8 @@ type: "feature"               # feature | fix | improvement | announcement
 Description of the change in MDX...
 ```
 
+Read via `lib/changelog.ts`'s `getAllChangelogEntries()` — same `fs` + `gray-matter` approach as `lib/blog.ts`, but there's no `[slug]` detail route: entries render inline on the single `/changelog` page via `next-mdx-remote/rsc`, so there's no `getEntryBySlug` or `generateStaticParams` needed.
+
 ## Using Content in Components
 
 Import directly in Server Components — no fetch, no API, no loading state:
