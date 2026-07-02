@@ -152,6 +152,8 @@ components/sections/
   press/
     press-releases.tsx
     media-kit-section.tsx
+  legal/
+    legal-document-sections.tsx    → shared renderer for privacy/terms/security, driven by content/legal.ts
   changelog/
     changelog-list.tsx
   glossary/

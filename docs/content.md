@@ -24,6 +24,8 @@ Never hardcode company copy in component files. All text, names, descriptions, l
 | `content/careers.ts` | Open job listings — role, department, location, description, requirements |
 | `content/pricing.ts` | Pricing tiers — name, price, features, highlight flag |
 | `content/solutions.ts` | Persona/industry landing page data — slug, headline, use cases, CTA |
+| `content/legal.ts` | Privacy/terms/security document bodies — title, last updated, intro, sections |
+| `content/press.ts` | Press releases, boilerplate company bio, media kit asset links |
 | `content/blog/*.mdx` | Blog posts — MDX with frontmatter (author, date, category, tags) |
 | `content/changelog/*.mdx` | Changelog entries — MDX with frontmatter (date, type, version) |
 

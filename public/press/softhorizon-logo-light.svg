@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="140" viewBox="0 0 600 140">
+  <g transform="translate(0, 40)">
+    <rect x="0" y="0" width="48" height="20" rx="10" fill="#E8590C" />
+    <rect x="4" y="26" width="40" height="6" rx="3" fill="#E8590C" />
+    <rect x="8" y="36" width="32" height="6" rx="3" fill="#E8590C" />
+  </g>
+  <text x="72" y="86" font-family="system-ui, sans-serif" font-size="48" font-weight="700">
+    <tspan fill="#E8590C">Soft</tspan><tspan fill="#FFFFFF">Horizon</tspan>
+  </text>
+</svg>
