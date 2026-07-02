@@ -1,0 +1,40 @@
+---
+title: "Why We Rebuilt Our Client Dashboard in Next.js App Router"
+slug: "nextjs-app-router-migration"
+date: "2026-05-18"
+author: "wanjiru-kamau"
+category: "engineering"
+tags: ["Next.js", "React", "Performance"]
+summary: "We moved a client-facing dashboard from Pages Router to App Router mid-engagement. Here's what actually got better, and what we'd do differently."
+coverImage: "/images/blog/nextjs-app-router-migration.svg"
+readingTime: 6
+published: true
+---
+
+Most of the migration guides we read before starting this project focused on the mechanics — moving files into `app/`, renaming `getServerSideProps`, wiring up layouts. What they didn't cover was the part that actually mattered to the client: whether the dashboard would *feel* faster once we were done.
+
+It did. Here's what got us there, and where we hit friction.
+
+## Server Components changed our data-fetching story
+
+The dashboard's biggest performance problem wasn't bundle size — it was waterfalls. Every panel fetched its own data client-side after mount, which meant users watched five separate loading spinners resolve in sequence.
+
+With Server Components, most of that data now loads before the page ever reaches the browser:
+
+- Account summary, usage charts, and recent activity all render server-side in parallel
+- Only the interactive pieces — filters, date pickers, the live activity feed — ship as client bundles
+- Time to first meaningful paint dropped by more than half in our internal benchmarks
+
+## What was harder than expected
+
+Not everything was a clean win. A few things worth flagging if you're planning a similar move:
+
+1. **State that used to live in `_app.tsx`** needed a real home — we ended up with a small `providers/` composition instead of one giant provider tree.
+2. **Third-party chart libraries** assumed a client-rendered environment and needed explicit `"use client"` boundaries we hadn't budgeted time for.
+3. **Testing patterns** built around Pages Router's data-fetching lifecycle needed a rewrite, not a tweak.
+
+> The migration paid for itself in the first month of reduced support tickets about "the dashboard feels slow" — but budget more time for the client-boundary audit than you think you need.
+
+## Would we do it again?
+
+Yes — but earlier. The biggest lesson wasn't technical, it was sequencing: doing this mid-engagement meant retrofitting Server Components onto code that assumed client-side data fetching everywhere. Starting a new client project on App Router from day one avoids most of the friction described above entirely.

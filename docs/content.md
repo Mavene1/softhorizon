@@ -447,6 +447,21 @@ published: true               # false = draft, excluded from listings
 Post body in MDX below the frontmatter...
 ```
 
+### Reading blog posts — the one exception to "always import"
+
+Unlike every other `content/*.ts` file, blog posts are **not** statically imported — `.mdx` files can't be `import`ed as typed TypeScript objects the way `content/team.ts` or `content/projects.ts` can. Instead, `lib/blog.ts` reads `content/blog/*.mdx` from the filesystem at request/build time using `gray-matter` (frontmatter parsing) — no `@next/mdx`, no changes to `next.config.ts`:
+
+```ts
+// lib/blog.ts
+import { getAllPosts, getPostBySlug, getAllPostSlugs } from "@/lib/blog";
+
+getAllPosts();        // frontmatter only, published + sorted — for the index/listing page
+getPostBySlug(slug);  // frontmatter + raw MDX body — for the detail page
+getAllPostSlugs();     // for generateStaticParams
+```
+
+The raw MDX body is rendered with `next-mdx-remote/rsc`'s `<MDXRemote>` (an async Server Component — no client bundle cost for the content itself), with typography overrides from `components/sections/blog/blog-mdx-components.tsx` passed via the `components` prop. This is still fully static: `generateStaticParams` in `app/blog/[slug]/page.tsx` prerenders every published post at build time.
+
 ## Changelog MDX Frontmatter
 
 ```mdx

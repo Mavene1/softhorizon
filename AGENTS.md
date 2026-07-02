@@ -100,6 +100,7 @@ Deep-dive references live in `docs/`. Read these before building:
 | **Live chat** | **Crisp** (script embed via `components/layout/crisp-chat.tsx` — no npm) |
 | **Analytics** | **Vercel Analytics** (`@vercel/analytics`) + **Speed Insights** (`@vercel/speed-insights`) |
 | **Product analytics** | **PostHog** (`posthog-js`) — event tracking, funnels, session recording |
+| **Blog / MDX** | `gray-matter` (frontmatter) + `next-mdx-remote/rsc` (`<MDXRemote>`, async Server Component) — no `@next/mdx`, no `next.config.ts` changes. See `lib/blog.ts` and `docs/content.md` |
 
 All third-party service packages are installed. See `docs/integrations.md` for setup patterns and env vars for each.
 
@@ -203,6 +204,7 @@ lib/
   metadata.ts             → buildMetadata helper         [planned]
   query-client.ts         → makeQueryClient (gcTime: 5 min)
   search.ts               → Fuse.js index builder for global search  [planned]
+  blog.ts                 → fs + gray-matter reader for content/blog/*.mdx (the one content/ exception — not a static import)
 
 store/
   ui-store.ts             → Zustand (minimal): mobileMenuOpen, searchOpen  [planned]

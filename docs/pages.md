@@ -136,9 +136,12 @@ components/sections/
     pricing-faq.tsx
   blog/
     blog-grid.tsx
+    blog-filter.tsx           → "use client" — Tabs category filter, same pattern as projects/webinars
     blog-post-card.tsx
-    blog-post-layout.tsx
+    blog-post-layout.tsx      → async Server Component — renders MDX via next-mdx-remote/rsc
+    blog-mdx-components.tsx   → typography overrides passed to <MDXRemote components={...} />
     author-card.tsx
+    category-labels.ts        → BlogCategory → display label map
   careers/
     jobs-list.tsx
     job-detail-sections.tsx
