@@ -4,7 +4,7 @@ import { AnimatedCounter } from "@/components/common/animated-counter";
 export function StatsSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-6 py-10">
-      <div className="bg-gradient-brand-blue rounded-3xl px-8 py-14 sm:px-14">
+      <div className="rounded-3xl bg-brand-blue px-8 py-14 sm:px-14">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {impactStats.map((stat) => (
             <div key={stat.label}>

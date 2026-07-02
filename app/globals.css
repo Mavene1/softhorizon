@@ -152,22 +152,3 @@
   background-image: radial-gradient(currentColor 1px, transparent 1px);
   background-size: 24px 24px;
 }
-
-/* Monochromatic diagonal gradients for large brand-color surfaces (CTA strips, stat banners) —
-   keeps the same hue as the flat token but adds depth so it reads less like a solid block. */
-.bg-gradient-primary {
-  background-image: linear-gradient(
-    135deg,
-    color-mix(in oklab, var(--primary), white 12%) 0%,
-    var(--primary) 45%,
-    color-mix(in oklab, var(--primary), black 20%) 100%
-  );
-}
-.bg-gradient-brand-blue {
-  background-image: linear-gradient(
-    135deg,
-    color-mix(in oklab, var(--brand-blue), white 18%) 0%,
-    var(--brand-blue) 45%,
-    color-mix(in oklab, var(--brand-blue), black 25%) 100%
-  );
-}
