@@ -185,6 +185,16 @@ import { NewsletterSignup } from "@/components/common/newsletter-signup";
 <NewsletterSignup />
 ```
 
+### `Timeline`
+
+Dot-and-line milestone timeline, reads `milestones` from `content/site.ts`. Used on `/about` and `/impact`.
+
+```tsx
+import { Timeline } from "@/components/common/timeline";
+
+<Timeline />
+```
+
 ---
 
 ## Section Components (`components/sections/{page}/`)
@@ -229,7 +239,9 @@ components/sections/
     story-section.tsx
     mission-vision-section.tsx
     values-section.tsx
-    timeline-section.tsx
+  impact/
+    impact-intro-section.tsx
+    impact-stats-section.tsx
   services/
     services-grid.tsx
     service-detail-sections.tsx

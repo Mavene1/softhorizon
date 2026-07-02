@@ -1,7 +1,7 @@
 import { StorySection } from "./story-section";
 import { MissionVisionSection } from "./mission-vision-section";
 import { ValuesSection } from "./values-section";
-import { TimelineSection } from "./timeline-section";
+import { Timeline } from "@/components/common/timeline";
 import { CtaStrip } from "@/components/common/cta-strip";
 
 export function AboutSections() {
@@ -10,7 +10,7 @@ export function AboutSections() {
       <StorySection />
       <MissionVisionSection />
       <ValuesSection />
-      <TimelineSection />
+      <Timeline />
       <section className="mx-auto w-full max-w-6xl px-6 pb-24">
         <CtaStrip
           headline="Want to work with a team like this?"

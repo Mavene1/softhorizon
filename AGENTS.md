@@ -183,7 +183,7 @@ components/
   sections/               → page sections, organized by page
     home/                 → hero-section, services-preview, projects-preview, stats-section,
                             testimonials-section, cta-section
-    about/                → story-section, mission-vision-section, values-section, timeline-section
+    about/                → story-section, mission-vision-section, values-section (Timeline now lives in components/common/, shared with /impact)
     services/             → services-grid, service-detail-sections
     solutions/            → solutions-grid, solution-hero, use-cases-section
     projects/             → projects-grid, project-card, project-detail-sections

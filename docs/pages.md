@@ -114,7 +114,7 @@ components/sections/
     story-section.tsx
     mission-vision-section.tsx
     values-section.tsx
-    timeline-section.tsx
+    (Timeline lives in components/common/timeline.tsx — shared with /impact)
   services/
     services-grid.tsx
     service-detail-sections.tsx
@@ -158,11 +158,14 @@ components/sections/
   legal/
     legal-document-sections.tsx    → shared renderer for privacy/terms/security, driven by content/legal.ts
   changelog/
-    changelog-list.tsx        → timeline UI (reuses the about/timeline-section.tsx dot-and-line pattern), reads lib/changelog.ts
+    changelog-list.tsx        → timeline UI (same dot-and-line pattern as components/common/timeline.tsx), reads lib/changelog.ts
     changelog-mdx-components.tsx → minimal MDXRemote overrides (p, a only — entries are short)
   glossary/
     glossary-index.tsx
     term-detail.tsx
+  impact/
+    impact-intro-section.tsx
+    impact-stats-section.tsx  → reuses content/site.ts impactStats + AnimatedCounter, plus Timeline (common)
   resources/
     case-studies-grid.tsx        → Server Component — stacked narrative sections (problem/solution/results/quote), from content/case-studies.ts
     whitepapers-grid.tsx

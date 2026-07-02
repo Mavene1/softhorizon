@@ -118,6 +118,7 @@ export const megaMenus: MegaMenu[] = [
           { label: "Team", description: "The people building with our clients.", href: "/team", icon: "UsersRound" },
           { label: "Careers", description: "Open roles across engineering, design, and product.", href: "/careers", icon: "UserPlus" },
           { label: "Press", description: "Company bio, logos, and media kit.", href: "/press", icon: "FileText" },
+          { label: "Impact", description: "Transparent numbers on what we've shipped.", href: "/impact", icon: "TrendingUp" },
           { label: "Partners", description: "Partner with us on client delivery.", href: "/partners", icon: "Handshake" },
         ],
       },

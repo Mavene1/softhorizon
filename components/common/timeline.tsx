@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion";
 import { SectionHeader } from "@/components/common/section-header";
 import { milestones } from "@/content/site";
 
-export function TimelineSection() {
+export function Timeline() {
   return (
     <section className="mx-auto w-full max-w-6xl px-6 pb-24">
       <Reveal>
