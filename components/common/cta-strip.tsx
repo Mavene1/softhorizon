@@ -15,7 +15,7 @@ interface CtaStripProps {
 
 export function CtaStrip({ headline, subtext, primaryCta, secondaryCta }: CtaStripProps) {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-primary px-8 py-14 sm:px-14">
+    <div className="bg-gradient-primary relative overflow-hidden rounded-3xl px-8 py-14 sm:px-14">
       <div className="bg-dot-grid pointer-events-none absolute inset-0 text-white/10" aria-hidden />
       <div className="relative mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">{headline}</h2>
