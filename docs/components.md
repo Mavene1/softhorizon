@@ -63,7 +63,7 @@ Instantiated once in the root layout. Never render them inside page sections.
 
 | Component | File | Purpose |
 |---|---|---|
-| `Navbar` | `navbar.tsx` | Sticky top navigation — mega-menu dropdowns (Services/Solutions/Resources/Company), simple links (Work/Pricing), `ThemeToggle`, scroll-aware background |
+| `Navbar` | `navbar.tsx` | Sticky top navigation — mega-menu dropdowns (Services/Solutions/Resources/Company), simple links (Projects/Pricing), `ThemeToggle`, scroll-aware background |
 | `Footer` | `footer.tsx` | Site footer — links, social icons, copyright |
 | `MobileMenu` | `mobile-menu.tsx` | Mobile `Sheet` drawer — accordion (`Collapsible`) mirrors the desktop mega-menus |
 | `SearchDialog` | `search-dialog.tsx` | Cmd+K global search modal (Fuse.js over `content/`) |
@@ -147,11 +147,11 @@ import { ProjectCard } from "@/components/common/project-card";
 
 ### `TeamMemberCard`
 
-Team member thumbnail with photo, name, role. Links to `/team/[slug]`.
+Team member thumbnail with photo, name, role. Links to `/team/[slug]`. Lives in `components/sections/team/` (not `common/`) since it's only used across the team pages.
 
 ```tsx
 import type { TeamMember } from "@/content/team";
-import { TeamMemberCard } from "@/components/common/team-member-card";
+import { TeamMemberCard } from "@/components/sections/team/team-member-card";
 
 <TeamMemberCard member={member} />
 ```
