@@ -25,6 +25,14 @@ export interface MegaMenu {
   };
 }
 
+/** True when the current pathname matches any item (or the featured link) inside this mega menu. */
+export function isMegaMenuActive(menu: MegaMenu, pathname: string): boolean {
+  return (
+    menu.sections.some((section) => section.items.some((item) => pathname.startsWith(item.href))) ||
+    pathname.startsWith(menu.featured.href)
+  );
+}
+
 const featuredServices = services.filter((service) => service.featured);
 const otherServices = services.filter((service) => !service.featured);
 

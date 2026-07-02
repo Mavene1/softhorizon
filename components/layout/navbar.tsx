@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Logo } from "@/components/common/logo";
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { MobileMenu } from "@/components/layout/mobile-menu";
-import { megaMenus, simpleLinks, navCta, type MegaMenu } from "@/components/layout/nav-config";
+import { megaMenus, simpleLinks, navCta, isMegaMenuActive, type MegaMenu } from "@/components/layout/nav-config";
 import { useNavbar } from "@/components/layout/use-navbar";
 import { Button } from "@/components/ui/button";
 import { DynamicIcon } from "@/lib/icons";
@@ -74,12 +74,14 @@ function MegaMenuPanel({ menu, onKeep, onClose }: { menu: MegaMenu; onKeep: () =
 function DesktopNavItem({
   menu,
   isOpen,
+  active,
   onOpen,
   onClose,
   onKeep,
 }: {
   menu: MegaMenu;
   isOpen: boolean;
+  active: boolean;
   onOpen: () => void;
   onClose: () => void;
   onKeep: () => void;
@@ -90,7 +92,7 @@ function DesktopNavItem({
         variant="ghost"
         className={cn(
           "flex h-auto items-center gap-1 rounded-lg px-3.5 py-2 text-sm font-medium transition-colors",
-          isOpen ? "bg-accent text-foreground" : "text-muted-foreground hover:text-foreground"
+          isOpen ? "bg-accent text-foreground" : active ? "text-primary" : "text-muted-foreground hover:text-foreground"
         )}
         aria-expanded={isOpen}
       >
@@ -138,6 +140,7 @@ export function Navbar() {
               key={menu.label}
               menu={menu}
               isOpen={activeMenu === menu.label}
+              active={isMegaMenuActive(menu, pathname)}
               onOpen={() => openMenu(menu.label)}
               onClose={closeMenu}
               onKeep={keepMenu}
