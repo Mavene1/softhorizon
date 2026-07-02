@@ -146,6 +146,9 @@ components/sections/
   contact/
     contact-form-section.tsx
     contact-info-section.tsx
+  partners/
+    partner-intro-section.tsx
+    partner-application-form-section.tsx
   press/
     press-releases.tsx
     media-kit-section.tsx
