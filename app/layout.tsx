@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.heroSubtitle,
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     siteName: siteConfig.name,
     locale: "en_US",
