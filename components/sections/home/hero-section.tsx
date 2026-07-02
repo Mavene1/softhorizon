@@ -1,17 +1,62 @@
 "use client";
 
 import Link from "next/link";
-import { FadeUp, StaggerContainer } from "@/components/motion";
+import { FadeUp, StaggerContainer, motion } from "@/components/motion";
+import { AnimatedCounter } from "@/components/common/animated-counter";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/content/site";
+import { impactStats, siteConfig } from "@/content/site";
+
+function AccentUnderline() {
+  return (
+    <motion.svg
+      className="pointer-events-none absolute -bottom-1 left-0 h-2.5 w-full text-primary"
+      viewBox="0 0 100 10"
+      preserveAspectRatio="none"
+      fill="none"
+      aria-hidden
+    >
+      <motion.path
+        d="M2 7.5 Q 50 1.5 98 7"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.7, delay: 0.55, ease: "easeInOut" }}
+      />
+    </motion.svg>
+  );
+}
+
+function Headline() {
+  const { heroHeadline, heroHeadlineAccent } = siteConfig;
+  const accentIndex = heroHeadlineAccent ? heroHeadline.indexOf(heroHeadlineAccent) : -1;
+
+  if (accentIndex === -1) {
+    return <>{heroHeadline}</>;
+  }
+
+  const before = heroHeadline.slice(0, accentIndex);
+  const after = heroHeadline.slice(accentIndex + heroHeadlineAccent.length);
+
+  return (
+    <>
+      {before}
+      <span className="relative inline-block">
+        {heroHeadlineAccent}
+        <AccentUnderline />
+      </span>
+      {after}
+    </>
+  );
+}
 
 export function HeroSection() {
+  const heroStat = impactStats[0];
+
   return (
     <section className="relative overflow-hidden">
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,color-mix(in_oklab,var(--primary),white_82%),transparent_45%)]"
-        aria-hidden
-      />
+      <div className="pointer-events-none absolute inset-0 bg-glow [--glow-x:78%] [--glow-y:18%]" aria-hidden />
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 px-6 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
         <StaggerContainer>
           <FadeUp>
@@ -22,7 +67,7 @@ export function HeroSection() {
           </FadeUp>
           <FadeUp delay={0.08}>
             <h1 className="mt-6 text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              {siteConfig.heroHeadline}
+              <Headline />
             </h1>
           </FadeUp>
           <FadeUp delay={0.16}>
@@ -41,7 +86,16 @@ export function HeroSection() {
         </StaggerContainer>
 
         <FadeUp delay={0.3} className="relative hidden lg:block">
-          <div className="rounded-2xl border border-border bg-card shadow-2xl shadow-foreground/10">
+          <div
+            className="absolute -top-14 -right-14 h-64 w-64 rounded-full bg-primary/40 blur-3xl"
+            aria-hidden
+          />
+          <div
+            className="absolute -bottom-16 -left-14 h-56 w-56 rounded-full bg-brand-blue/40 blur-3xl"
+            aria-hidden
+          />
+
+          <div className="relative rounded-2xl border border-border bg-card shadow-2xl shadow-foreground/10">
             <div className="flex items-center gap-1.5 border-b border-border px-4 py-3.5">
               <span className="h-2.5 w-2.5 rounded-full bg-muted" />
               <span className="h-2.5 w-2.5 rounded-full bg-muted" />
@@ -75,6 +129,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
+
           <div className="absolute -bottom-5 -left-6 flex items-center gap-2.5 rounded-xl bg-brand-blue px-4 py-3 text-white shadow-xl">
             <span className="block h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_4px_rgba(52,211,153,0.2)]" />
             <div>
@@ -84,6 +139,21 @@ export function HeroSection() {
               <div className="text-sm font-semibold">Shipped to production</div>
             </div>
           </div>
+
+          <motion.div
+            className="absolute -top-6 -right-6 flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-xl"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div>
+              <div className="text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
+                {heroStat.label}
+              </div>
+              <div className="mt-0.5 text-lg font-bold text-primary">
+                <AnimatedCounter target={heroStat.target} suffix={heroStat.suffix} />
+              </div>
+            </div>
+          </motion.div>
         </FadeUp>
       </div>
     </section>

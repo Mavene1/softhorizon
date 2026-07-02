@@ -38,6 +38,7 @@ export const siteConfig = {
   shortTagline: "Digital Excellence",
 
   heroHeadline: "We Build Software That Drives Growth",
+  heroHeadlineAccent: "Software", // substring of heroHeadline to underline (hero-section.tsx animated SVG)
   heroSubtitle:
     "SoftHorizon partners with ambitious companies to design and build digital products that solve real problems and create lasting impact.",
 

@@ -126,6 +126,27 @@ className="text-[oklch(0.205_0_0)]"
 | Sidebar | `bg-sidebar`, `text-sidebar-foreground`, `border-sidebar-border` |
 | Radius | `rounded-sm`, `rounded-md`, `rounded-lg`, `rounded-xl` (computed from `--radius`) |
 
+## Reusable Gradients via `@utility`
+
+Don't repeat `bg-[radial-gradient(...)]` arbitrary values across sections. Define the pattern once in `globals.css` with `@utility`, parameterized by CSS custom properties, and apply position/tint per usage with Tailwind's arbitrary-property syntax:
+
+```css
+/* app/globals.css */
+@utility bg-glow {
+  background-image: radial-gradient(
+    circle at var(--glow-x, 50%) var(--glow-y, 20%),
+    color-mix(in oklab, var(--primary), white var(--glow-tint, 82%)),
+    transparent 45%
+  );
+}
+```
+
+```tsx
+<div className="pointer-events-none absolute inset-0 bg-glow [--glow-x:78%] [--glow-y:18%]" aria-hidden />
+```
+
+Used for the soft ambient hero/section glow (`hero-section.tsx`, `story-section.tsx`, `solution-hero.tsx`). Only promote a gradient string to a `@utility` once it's repeated in 2+ places — a one-off decorative gradient (e.g. the diagonal-stripe placeholder in the hero mock card) stays inline.
+
 ## Adding Custom Brand Tokens
 
 To add project-specific color tokens, extend `globals.css`:

@@ -5,6 +5,7 @@ export const siteConfig = {
   shortTagline: "Software · Web & Mobile · Cloud · AI",
 
   heroHeadline: "We build the technology your business runs on.",
+  heroHeadlineAccent: "technology",
   heroSubtitle:
     "SoftHorizon is a software engineering partner. From web and mobile apps to cloud, APIs, and AI, we design, build, and scale the custom solutions that move your business forward.",
 

@@ -9,7 +9,7 @@ export function SolutionHero({ solution }: { solution: Solution }) {
   return (
     <section className="relative overflow-hidden">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_82%_12%,color-mix(in_oklab,var(--primary),white_85%),transparent_45%)]"
+        className="pointer-events-none absolute inset-0 bg-glow [--glow-x:82%] [--glow-y:12%] [--glow-tint:85%]"
         aria-hidden
       />
       <div className="relative mx-auto w-full max-w-6xl px-6 py-20 lg:py-24">

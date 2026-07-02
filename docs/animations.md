@@ -148,6 +148,41 @@ export function HeroSection() {
 }
 ```
 
+### Animated SVG Underline (Stroke Draw)
+
+For accenting one word in a headline (e.g. the hero). Wrap the accent word in a `relative inline-block` span and draw an SVG path under it via `pathLength`:
+
+```tsx
+"use client";
+import { motion } from "@/components/motion";
+
+function AccentUnderline() {
+  return (
+    <motion.svg
+      className="pointer-events-none absolute -bottom-1 left-0 h-2.5 w-full text-primary"
+      viewBox="0 0 100 10"
+      preserveAspectRatio="none"
+      fill="none"
+      aria-hidden
+    >
+      <motion.path
+        d="M2 7.5 Q 50 1.5 98 7"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.7, delay: 0.55, ease: "easeInOut" }}
+      />
+    </motion.svg>
+  );
+}
+
+// usage: <span className="relative inline-block">{word}<AccentUnderline /></span>
+```
+
+The accent word itself comes from content (e.g. `siteConfig.heroHeadlineAccent`), not a hardcoded string — the component splits the headline around it. See `hero-section.tsx`.
+
 ### Page Transition (Layout-Level)
 
 Smooth page transitions via the root layout:

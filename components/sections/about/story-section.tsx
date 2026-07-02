@@ -8,7 +8,7 @@ export function StorySection() {
   return (
     <section className="relative overflow-hidden">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_10%,color-mix(in_oklab,var(--primary),white_88%),transparent_45%)]"
+        className="pointer-events-none absolute inset-0 bg-glow [--glow-x:12%] [--glow-y:10%] [--glow-tint:88%]"
         aria-hidden
       />
       <div className="relative mx-auto w-full max-w-6xl px-6 py-20 lg:py-24">

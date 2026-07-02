@@ -152,3 +152,12 @@
   background-image: radial-gradient(currentColor 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* Soft ambient hero/section glow. Position via [--glow-x] / [--glow-y], tint via [--glow-tint]. */
+@utility bg-glow {
+  background-image: radial-gradient(
+    circle at var(--glow-x, 50%) var(--glow-y, 20%),
+    color-mix(in oklab, var(--primary), white var(--glow-tint, 82%)),
+    transparent 45%
+  );
+}
