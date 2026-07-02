@@ -160,7 +160,7 @@ components/sections/
     glossary-index.tsx
     term-detail.tsx
   resources/
-    case-studies-grid.tsx        → [ ] not yet built
+    case-studies-grid.tsx        → Server Component — stacked narrative sections (problem/solution/results/quote), from content/case-studies.ts
     whitepapers-grid.tsx
     whitepaper-card.tsx          → "use client" — Dialog + email-gate form per card
     whitepapers/
@@ -168,7 +168,9 @@ components/sections/
       actions.ts                 → requestWhitepaper() — Resend emails a download link, per docs/integrations.md
       hooks/
         use-whitepaper-request-form.ts
-    webinars-grid.tsx            → [ ] not yet built
+    webinars-grid.tsx
+    webinars-filter.tsx          → "use client" — Tabs (All/Upcoming/Recorded) over content/webinars.ts
+    webinar-card.tsx
 ```
 
 ### Page Aggregator Components

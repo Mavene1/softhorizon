@@ -28,6 +28,8 @@ Never hardcode company copy in component files. All text, names, descriptions, l
 | `content/press.ts` | Press releases, boilerplate company bio, media kit asset links |
 | `content/glossary.ts` | Domain glossary terms — slug, term, definition, longDefinition, category, related terms |
 | `content/whitepapers.ts` | Gated whitepaper listings — title, summary, cover image, PDF file path, topics |
+| `content/case-studies.ts` | Deep-narrative case studies — problem, solution, results, quote, optional link to `content/projects.ts` |
+| `content/webinars.ts` | Webinar listings — title, description, date, status (upcoming/recorded), speaker slugs into `content/team.ts` |
 | `content/blog/*.mdx` | Blog posts — MDX with frontmatter (author, date, category, tags) |
 | `content/changelog/*.mdx` | Changelog entries — MDX with frontmatter (date, type, version) |
 
