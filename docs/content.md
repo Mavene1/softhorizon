@@ -134,14 +134,11 @@ export interface Project {
   slug: string;
   title: string;
   client: string;
-  clientLogo?: string;
   summary: string;           // 1–2 sentence description for cards
-  description: string;       // full markdown/prose for detail page
+  description: string;       // full prose for detail page
   category: ProjectCategory;
   tags: string[];
   coverImage: string;        // path to image in public/
-  gallery?: string[];        // additional images
-  url?: string;              // live project URL (if public)
   results?: ProjectResult[]; // measurable outcomes
   featured: boolean;
   year: number;
@@ -161,6 +158,16 @@ export type ProjectCategory =
   | "api"
   | "design-system"
   | "other";
+
+// Human-readable labels for ProjectCategory — used by the /projects category filter tabs
+export const categoryLabels: Record<ProjectCategory, string> = {
+  "web-app": "Web apps",
+  "mobile-app": "Mobile apps",
+  "e-commerce": "E-commerce",
+  api: "APIs",
+  "design-system": "Design systems",
+  other: "Other",
+};
 
 export const projects: Project[] = [
   {

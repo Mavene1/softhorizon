@@ -124,7 +124,7 @@ components/sections/
     use-cases-section.tsx
   projects/
     projects-grid.tsx
-    project-card.tsx
+    projects-filter.tsx      → "use client" — category tabs (Tabs) + filtered grid, wrapped by projects-grid.tsx
     project-detail-sections.tsx
   team/
     team-grid.tsx

@@ -1,5 +1,14 @@
 export type ProjectCategory = "web-app" | "mobile-app" | "e-commerce" | "api" | "design-system" | "other";
 
+export const categoryLabels: Record<ProjectCategory, string> = {
+  "web-app": "Web apps",
+  "mobile-app": "Mobile apps",
+  "e-commerce": "E-commerce",
+  api: "APIs",
+  "design-system": "Design systems",
+  other: "Other",
+};
+
 export interface ProjectResult {
   metric: string;
   value: string;

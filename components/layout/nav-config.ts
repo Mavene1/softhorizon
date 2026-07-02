@@ -133,7 +133,7 @@ export const megaMenus: MegaMenu[] = [
 ];
 
 export const simpleLinks = [
-  { label: "Work", href: "/projects" },
+  { label: "Projects", href: "/projects" },
   { label: "Pricing", href: "/pricing" },
 ];
 
